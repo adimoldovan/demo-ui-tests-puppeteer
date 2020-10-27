@@ -1,0 +1,25 @@
+{
+  "name": "demo-ui-tests-puppeteer",
+  "version": "1.0.0",
+  "description": "UI automation project to demonstrate Puppeteer",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adimoldovan/demo-ui-tests-puppeteer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adimoldovan/demo-ui-tests-puppeteer/issues"
+  },
+  "homepage": "https://github.com/adimoldovan/demo-ui-tests-puppeteer#readme",
+  "dependencies": {
+    "jest": "^26.6.1",
+    "jest-puppeteer": "^4.4.0",
+    "puppeteer": "^5.4.0"
+  }
+}
