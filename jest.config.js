@@ -6,5 +6,21 @@ module.exports = {
     testMatch: [
         "**/test/**/*.test.js"
     ],
-    verbose: true
+    verbose: true,
+    reporters: [
+        "default",
+        ["jest-junit",
+            {
+                suiteName: "E2E Demo Shop tests",
+                outputDirectory: "out/reports",
+                outputName: "junit-results.xml",
+                uniqueOutputName: "true",
+            }
+        ],
+        ["jest-html-reporters", {
+            "publicPath": "./out/reports",
+            "filename": "test-report.html",
+            "expand": true
+        }]
+    ]
 }
