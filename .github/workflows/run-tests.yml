@@ -12,7 +12,7 @@ on:
         default: 'Test value'
 
 jobs:
-  build:
+  e2e-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,8 +26,8 @@ jobs:
       - name: Run tests
         run: npm test
       - name: Publish artifacts
-          if: always()
-          uses: actions/upload-artifact@v2.2.0
-          with:
-            name: test-output
-            path: out
+        if: always()
+        uses: actions/upload-artifact@v2.2.0
+        with:
+          name: test-output
+          path: out
