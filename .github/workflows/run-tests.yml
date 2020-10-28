@@ -25,9 +25,15 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm test
-      - name: Publish artifacts
+      - name: Upload artifacts
         if: always()
         uses: actions/upload-artifact@v2.2.0
         with:
           name: test-output
           path: out
+      - name: Publish reports
+        if: always()
+        env:
+          EMAIL: "github-actions-bot-noreply@noreply"
+          USERNAME: "github-actions-bot"
+        run: sh bin/publish-reports.sh
